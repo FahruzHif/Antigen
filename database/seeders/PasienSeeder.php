@@ -34,8 +34,8 @@ class PasienSeeder extends Seeder
             'k_tiga'        =>  '1',
             'k_empat'       =>  '1',
             'screening'     =>  '1',
-            'created_at'     =>  '2021-11-26 11:27:12',
-            'updated_at'     =>  '2021-11-26 11:27:12',
+            'created_at'    =>  '2021-11-26 11:27:12',
+            'updated_at'    =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -59,8 +59,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '0',
         'k_empat'           =>  '0',
         'screening'         =>  '1',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -85,8 +85,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '1',
         'k_empat'           =>  '0',
         'screening'         =>  '0',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -110,8 +110,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '0',
         'k_empat'           =>  '1',
         'screening'         =>  '1',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -135,8 +135,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '1',
         'k_empat'           =>  '1',
         'screening'         =>  '1',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -160,8 +160,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '1',
         'k_empat'           =>  '1',
         'screening'         =>  '0',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -185,8 +185,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '1',
         'k_empat'           =>  '1',
         'screening'         =>  '1',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -210,8 +210,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '1',
         'k_empat'           =>  '1',
         'screening'         =>  '1',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -235,8 +235,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '0',
         'k_empat'           =>  '1',
         'screening'         =>  '1',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
 
@@ -260,8 +260,8 @@ class PasienSeeder extends Seeder
         'k_tiga'            =>  '1',
         'k_empat'           =>  '1',
         'screening'         =>  '1',
-        'created_at'     =>  '2021-11-26 11:27:12',
-        'updated_at'     =>  '2021-11-26 11:27:12',
+        'created_at'        =>  '2021-11-26 11:27:12',
+        'updated_at'        =>  '2021-11-26 11:27:12',
         ]
     );
     }

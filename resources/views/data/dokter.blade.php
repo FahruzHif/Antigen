@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('breadcrumb')
-    <h2>{{ $judultabel }}</h2>
+    <h2>Dokter</h2>
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
             <a href="{{ route('home.index') }}">Home</a>
@@ -9,7 +9,7 @@
             Data
         </li>
         <li class="breadcrumb-item active">
-            <strong>Pasien</strong>
+            <strong>Dokter</strong>
         </li>
     </ol>
 @endsection
@@ -40,8 +40,8 @@
                 <div class="card-body">
                     <div class="card-title">
                         <div class="text-right mr-3">
-                            <button class="btn btn-primary btn-sm" type="button"  data-toggle="modal" data-target="#CreatePasienModal">
-                                <strong>Tambah Pasien</strong>
+                            <button class="btn btn-primary btn-sm" type="button"  data-toggle="modal" data-target="#CreateDokterModal">
+                                <strong>Tambah Dokter</strong>
                             </button>
                         </div>
                     </div>
@@ -49,9 +49,9 @@
                         <table class="table table-bordered datatable">
                             <thead>
                                 <tr>
-                                    <th width="110">No Rekam Medis</th>
+                                    <th width="110">No Dokter</th>
                                     <th width="170">Nama</th>
-                                    <th width="110">Tanggal Tes</th>
+                                    <th width="110">Jenis Kelamin</th>
                                     <th width="200" class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -63,13 +63,13 @@
     </div>
 </div>
 
-<!-- Create Pasien Modal -->
-<div class="modal fade" id="CreatePasienModal">
+<!-- Create Dokter Modal -->
+<div class="modal fade" id="CreateDokterModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Tambah Pasien</h4>
+                <h4 class="modal-title">Tambah Dokter</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!-- Modal body -->
@@ -78,35 +78,17 @@
             <div class="modal-body">
                 <table class="borderless">
                 <tr>
-                    <td>
+                    <td>        
                         <div class="form-group">
-                            <label>No Lab:</label>
-                            <input type="text" class="form-control" name="no_lab" id="no_lab">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <label>No Rekam Medis:</label>
-                            <input type="text" class="form-control" name="no_rm" id="no_rm">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <label>Lokasi:</label>
-                            <input type="text" class="form-control" name="lokasi" id="lokasi">
+                            <label>No Dokter :</label>
+                            <input type="text" class="form-control" name="no_dok" id="no_dok">
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2">
-                        <div class="form-group">
-                            <label>Nama:</label>
-                            <input type="text" class="form-control" name="nama" id="nama">
-                        </div>
-                    </td>
                     <td>
                         <div class="form-group">
-                            <label>Nama Dokter:</label>
+                            <label>Nama Dokter :</label>
                             <input type="text" class="form-control" name="nama_dok" id="nama_dok">
                         </div>
                     </td>
@@ -114,122 +96,16 @@
                 <tr>
                     <td>
                         <div class="form-group">
-                            <label>Umur:</label>
-                            <input type="text" class="form-control" name="umur" id="umur">
-                        </div>
-                    </td>
-                    <td colspan="2" rowspan="2">
-                        <div class="form-group">
-                            <label>Alamat:</label>
-                            <textarea class="form-control" name="alamat" id="alamat" style="margin-top: 0px; margin-bottom:0px; height:133px;" ></textarea>
-                        </div>
-                    </td>   
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <label>Tanggal Lahir:</label>
-                            <input type="text" class="form-control" name="tgl_lahir" id="tgl_lahir" data-provide="datepicker">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <label>No Hp:</label>
-                            <input type="text" class="form-control" name="no_hp" id="no_hp">
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <label>Jenis Kelamin:</label>
-                            <select class="form-control mb-1" name="jns_kelamin" id="jns_kelamin">
-                                <option value="Laki-Laki">Laki-Laki</option>
-                                <option value="Perempuan">Perempuan</option>
+                            <label>Jenis Kelamin :</label>
+                            <select class="form-control mb-1" name="jns_dok" id="jns_dok">
+                                <option value="Laki-Laki" >Laki-Laki</option>
+                                <option value="Perempuan" >Perempuan</option>
                             </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <label>Tanggal Tes:</label>
-                            <input type="text" class="form-control" name="tgl_tes" id="tgl_tes" data-provide="datepicker">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <label>Metode:</label>
-                            <select class="form-control mb-1" name="metode" id="metode">
-                                <option value="Swab">Swab</option>
-                                <option value="Rapid">Rapid</option>
-                                <option value="Rapid">PCR</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <label>IgM:</label>
-                            <select class="form-control mb-1" name="igm" id="igm">
-                                <option value="Positif">Positif</option>
-                                <option value="Negatif">Negatif</option>
-                            </select>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <label>IgG:</label>
-                            <select class="form-control mb-1" name="igg" id="igg">
-                                <option value="Positif">Positif</option>
-                                <option value="Negatif">Negatif</option>
-                            </select>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <label>Apakah anda memiliki keluhan Demam ?</label> <br>
-                            <input type="radio"  id="k_satu1" name="k_satu" value="1"> Ya</label> <br>
-                            <input type="radio" id="k_satu2" name="k_satu" value="0" checked> Tidak</label> <br>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <label>Apakah anda memiliki keluhan Nyeri telan ?</label> <br>
-                            <input type="radio"  id="k_dua1" name="k_dua" value="1"> Ya</label> <br>
-                            <input type="radio" id="k_dua2" name="k_dua" value="0" checked> Tidak</label> <br>
-                        </div>
-                    </td>
-                    <td rowspan="2">
-                        <div class="form-group">
-                            <label>Apakah anda Pernah :</label> <br>
-                            <li>Datang ke wilayah zona merah dan melakukan aktivitas disana</li>
-                            <li>Pernah berinteraksi dengan terduga pasien Covid-19</li>
-                            <li>Pernah mengalami gajala yang berhubungan dengan Covid-19</li>
-                            <li>Pernah mengikuti acara yang dihadiri banyak orang pada saat pandemi corona</li><br>
-                            <input type="radio"  id="screening1" name="status" value="1"> Ya</label>
-                            <input type="radio" id="screening2" name="status" value="0" checked> Tidak</label>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="form-group">
-                            <label>Apakah anda memiliki keluhan Batuk?</label> <br>
-                            <input type="radio"  id="k_tiga1" name="k_tiga" value="1"> Ya</label> <br>
-                            <input type="radio" id="k_tiga2" name="k_tiga" value="0" checked> Tidak</label> <br>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="form-group">
-                            <label>Apakah anda memiliki keluhan Nafas pendek / Sesak nafas / Nafas terasa berat ?</label> <br>
-                            <input type="radio"  id="k_empat1" name="k_empat" value="1"> Ya</label> <br>
-                            <input type="radio" id="k_empat2" name="k_empat" value="0" checked> Tidak</label><br>
                         </div>
                     </td>
                 </tr>
                 </table>
+
                 </form>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -237,7 +113,7 @@
                     </button>
                 </div>
                 <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
-                    <strong>Success!</strong> Pasien was added successfully.
+                    <strong>Success!</strong> Dokter was added successfully.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -245,25 +121,25 @@
             </div>
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" id="SubmitCreatePasienForm">Tambah</button>
+                <button type="button" class="btn btn-success" id="SubmitCreateDokterForm">Tambah</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Edit Pasien Modal -->
-<div class="modal" id="EditPasienModal">
+<!-- Edit Dokter Modal -->
+<div class="modal" id="EditDokterModal">
     <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Ubah Pasien</h4>
+                <h4 class="modal-title">Ubah Dokter</h4>
                 <button type="button" class="close modelClose" data-dismiss="modal">&times;</button>
             </div>
             <!-- Modal body -->
             <div class="modal-body">
-                <div id="EditPasienModalBody">
+                <div id="EditDokterModalBody">
                     
                 </div>
                 <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
@@ -272,7 +148,7 @@
                     </button>
                 </div>
                 <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
-                    <strong>Success!</strong> Pasien was added successfully.
+                    <strong>Success!</strong> Dokter was added successfully.
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -280,68 +156,33 @@
             </div>
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-success" id="SubmitEditPasienForm">Ubah</button>
+                <button type="button" class="btn btn-success" id="SubmitEditDokterForm">Ubah</button>
                 <button type="button" class="btn btn-danger modelClose" data-dismiss="modal">Tutup</button>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Delete Pasien Modal -->
-<div class="modal fade" id="DeletePasienModal">
+<!-- Delete Dokter Modal -->
+<div class="modal fade" id="DeleteDokterModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <h4 class="modal-title">Hapus Pasien</h4>
+                <h4 class="modal-title">Hapus Dokter</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <!-- Modal body -->
             <div class="modal-body">
-                <h4>Apakah kamu yakin ingin menghapus Pasien ini?</h4>
+                <h4>Apakah kamu yakin ingin menghapus Dokter ini?</h4>
             </div>
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" id="SubmitDeletePasienForm">Ya</button>
+                <button type="button" class="btn btn-danger" id="SubmitDeleteDokterForm">Ya</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Tidak</button>
             </div>
         </div>
     </div>
-
-<!-- Detail Pasien Modal -->
-<div class="modal" id="DetailPasienModal">
-    <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title">Detail Pasien</h4>
-                <button type="button" class="close modelClose" data-dismiss="modal">&times;</button>
-            </div>
-            <!-- Modal body -->
-            <div class="modal-body">
-                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
-                    <strong>Success!</strong> Pasien was added successfully.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div id="DetailPasienModalBody">
-                    
-                </div>
-            </div>
-            <!-- Modal footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger modelClose" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-{{-- </div> --}}
 @endsection
 
 @section('script')
@@ -365,17 +206,17 @@
             pageLength: 5,
             // scrollX: true,
             "order": [[ 0, "desc" ]],
-            ajax: '{{ route('get-pasien') }}',
+            ajax: '{{ route('get-dokter') }}',
             columns: [
-                {data: 'no_rm', name: 'no_rm'},
-                {data: 'nama', name: 'nama'},
-                {data: 'tgl_tes', name: 'tgl_tes'},
+                {data: 'no_dok', name: 'no_dok'},
+                {data: 'nama_dok', name: 'nama_dok'},
+                {data: 'jns_dok', name: 'jns_dok'},
                 {data: 'Actions', name: 'Actions',orderable:false,serachable:false,sClass:'text-center'},
             ]
         });
 
-        // Create Pasien Ajax request.
-        $('#SubmitCreatePasienForm').click(function(e) {
+        // Create Dokter Ajax request.
+        $('#SubmitCreateDokterForm').click(function(e) {
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
@@ -383,28 +224,12 @@
                 }
             });
             $.ajax({
-                url: "{{ route('pasien.store') }}",
+                url: "{{ route('dokter.store') }}",
                 method: 'post',
                 data: {
-                    no_lab: $('#no_lab').val(),
-                    no_rm: $('#no_rm').val(),
-                    nama: $('#nama').val(),
+                    no_dok: $('#no_dok').val(),
                     nama_dok: $('#nama_dok').val(),
-                    jns_kelamin: $('#jns_kelamin').val(),
-                    umur: $('#umur').val(),
-                    tgl_lahir: $('#tgl_lahir').val(),
-                    alamat: $('#alamat').val(),
-                    no_hp: $('#no_hp').val(),
-                    lokasi: $('#lokasi').val(),
-                    tgl_tes: $('#tgl_tes').val(),
-                    igm: $('#igm').val(),
-                    igg: $('#igg').val(),
-                    metode: $('#metode').val(),
-                    k_satu: $('input[name="k_satu"]:checked').val(),
-                    k_dua: $('input[name="k_dua"]:checked').val(),
-                    k_tiga: $('input[name="k_tiga"]:checked').val(),
-                    k_empat: $('input[name="k_empat"]:checked').val(),
-                    screening: $('input[name="status"]:checked').val(),
+                    jns_dok: $('#jns_dok').val(),
                 },
                 success: function(result) {
                     if(result.errors) {
@@ -419,7 +244,7 @@
                         $('.datatable').DataTable().ajax.reload();
                         setInterval(function(){ 
                             $('.alert-success').hide();
-                            $('#CreatePasienModal').modal('hide');
+                            $('#CreateDokterModal').modal('hide');
                             location.reload();
                         }, 2000);
                     }
@@ -427,57 +252,32 @@
             });
         });
 
-         // Get single Pasien in DetailModel
-         $('.modelClose').on('click', function(){
-            $('#DetailPasienModal').hide();
-        });
-        var id;
-        $('body').on('click', '#getDetailPasienData', function(e) {
-            // e.preventDefault();
-            $('.alert-danger').html('');
-            $('.alert-danger').hide();
-            id = $(this).data('id');
-            $.ajax({
-                url: "pasien/"+id+"/detail",
-                method: 'GET',
-                // data: {
-                //     id: id,
-                // },
-                success: function(result) {
-                    console.log(result);
-                    $('#DetailPasienModalBody').html(result.html);
-                    $('#DetailPasienModal').show();
-                }
-            });
-        });
-
-
-        // Get single Pasien in EditModel
+        // Get single Dokter in EditModel
         $('.modelClose').on('click', function(){
-            $('#EditPasienModal').hide();
+            $('#EditDokterModal').hide();
         });
         var id;
-        $('body').on('click', '#getEditPasienData', function(e) {
+        $('body').on('click', '#getEditDokterData', function(e) {
             // e.preventDefault();
             $('.alert-danger').html('');
             $('.alert-danger').hide();
             id = $(this).data('id');
             $.ajax({
-                url: "pasien/"+id+"/edit",
+                url: "dokter/"+id+"/edit",
                 method: 'GET',
                 // data: {
                 //     id: id,
                 // },
                 success: function(result) {
                     console.log(result);
-                    $('#EditPasienModalBody').html(result.html);
-                    $('#EditPasienModal').show();
+                    $('#EditDokterModalBody').html(result.html);
+                    $('#EditDokterModal').show();
                 }
             });
         });
 
-        // Update Pasien Ajax request.
-        $('#SubmitEditPasienForm').click(function(e) {
+        // Update Dokter Ajax request.
+        $('#SubmitEditDokterForm').click(function(e) {
             e.preventDefault();
             $.ajaxSetup({
                 headers: {
@@ -485,28 +285,12 @@
                 }
             });
             $.ajax({
-                url: "pasien/"+id,
+                url: "dokter/"+id,
                 method: 'PUT',
                 data: {
-                    no_lab: $('#editNo_lab').val(),
-                    no_rm: $('#editNo_rm').val(),
-                    nama: $('#editNama').val(),
+                    no_dok: $('#editNo_dok').val(),
                     nama_dok: $('#editNama_dok').val(),
-                    jns_kelamin: $('#editJns_kelamin').val(),
-                    umur: $('#editUmur').val(),
-                    tgl_lahir: $('#editTgl_lahir').val(),
-                    alamat: $('#editAlamat').val(),
-                    no_hp: $('#editNo_hp').val(),
-                    lokasi: $('#editLokasi').val(),
-                    tgl_tes: $('#editTgl_tes').val(),
-                    igm: $('#editIgm').val(),
-                    igg: $('#editIgg').val(),
-                    metode: $('#editMetode').val(),
-                    k_satu: $('input[name="editK_satu"]:checked').val(),
-                    k_dua: $('input[name="editK_dua"]:checked').val(),
-                    k_tiga: $('input[name="editK_tiga"]:checked').val(),
-                    k_empat: $('input[name="editK_empat"]:checked').val(),
-                    screening: $('input[name="editScreening"]:checked').val(),
+                    jns_dok: $('#editJns_dok').val(),
                 },
                 success: function(result) {
                     if(result.errors) {
@@ -521,19 +305,19 @@
                         location.reload();
                         setInterval(function(){ 
                             $('.alert-success').hide();
-                            $('#EditPasienModal').hide();
+                            $('#EditDokterModal').hide();
                         }, 2000);
                     }
                 }
             });
         });
 
-        // Delete Pasien Ajax request.
+        // Delete Dokter Ajax request.
         var deleteID;
         $('body').on('click', '#getDeleteId', function(){
             deleteID = $(this).data('id');
         })
-        $('#SubmitDeletePasienForm').click(function(e) {
+        $('#SubmitDeleteDokterForm').click(function(e) {
             e.preventDefault();
             var id = deleteID;
             $.ajaxSetup({
@@ -542,13 +326,13 @@
                 }
             });
             $.ajax({
-                url: "pasien/"+id,
+                url: "dokter/"+id,
                 method: 'DELETE',
                 success: function(result) {
                     $('.datatable').DataTable().ajax.reload();
                     setInterval(function(){ 
                         // $('.datatable').DataTable().ajax.reload();
-                        $('#DeletePasienModal').hide();
+                        $('#DeleteDokterModal').hide();
                         location.reload();
                     }, 1000);
                 }

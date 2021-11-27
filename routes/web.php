@@ -66,3 +66,5 @@ Route::get('/report', [ReportController::class, 'index'])->name('report.index');
 // });
 
 Route::resource('dokter', DokterController::class);
+Route::get('get-dokter', [DokterController::class, 'getDokter'])->name('get-dokter');
+Route::get('/dokter/{id?}', [DokterController::class, 'show']);

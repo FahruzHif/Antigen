@@ -31,11 +31,11 @@
             <li class="{{  request()->routeIs('home.*') ? 'active' : '' }}">
                 <a href="{{ route('home.index') }}"><i class="fa fa-home" style="font-size:16px" aria-hidden="true"></i> <span class="nav-label">Beranda</span></a>
             </li>
-            <!-- <li class="{{  request()->routeIs('datates.*') || request()->routeIs('datapeserta.*') || request()->routeIs('pasien.*') ? 'active' : '' }}">
+            <!-- <li class="{{ request()->routeIs('pasien.*') || request()->routeIs('dokter.*') ? 'active' : '' }}">
                 <a href="#"><i class="fa fa-database" style="font-size:16px"></i> <span class="nav-label">Data</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
-                    {{-- <li class="{{  request()->routeIs('datapeserta.*') ? 'active' : '' }}"><a href="/datapeserta">Data Peserta</a></li> --}}
                     <li class="{{  request()->routeIs('pasien.*') ? 'active' : '' }}"><a href="{{ route('pasien.index') }}">Data Pasien</a></li>
+                    <li class="{{  request()->routeIs('dokter.*') ? 'active' : '' }}"><a href="{{ route('dokter.index') }}">Data Dokter</a></li>
                 </ul>
             </li> -->
             <li class="{{  request()->routeIs('pasien.*') ? 'active' : '' }}">
