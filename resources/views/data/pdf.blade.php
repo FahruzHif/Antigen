@@ -111,7 +111,7 @@
                     </tr>
                     <tr>
                         <th>Tanggal Lahir</th>
-                        <td>{{ $pasien->tgl_lahir }}</td>
+                        <td>{{ date('d-m-Y', strtotime($pasien->tgl_lahir)) }}</td>
                         <th>Hasil Selesai</th>
                         <td>{{ $pasien->updated_at }}</td>
                     </tr>
@@ -167,7 +167,7 @@
                     </td>
                 <tr>
                     <td><b>Tanggal Tes</b></td>
-                    <td>{{ $pasien->tgl_tes }}</td>
+                    <td>{{ date('d-m-Y', strtotime($pasien->tgl_tes)) }}</td>
                     <td></td>
                     <td></td>
                     <td></td>
